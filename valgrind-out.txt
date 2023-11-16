@@ -1,0 +1,120 @@
+==81877== Memcheck, a memory error detector
+==81877== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==81877== Using Valgrind-3.15.0-608cb11914-20190413 and LibVEX; rerun with -h for copyright info
+==81877== Command: ./monty bytecodes/00.m
+==81877== Parent PID: 53684
+==81877== 
+--81877-- 
+--81877-- Valgrind options:
+--81877--    --leak-check=full
+--81877--    --show-leak-kinds=all
+--81877--    --track-origins=yes
+--81877--    --verbose
+--81877--    --log-file=valgrind-out.txt
+--81877-- Contents of /proc/version:
+--81877--   Linux version 5.15.90.1-microsoft-standard-WSL2 (oe-user@oe-host) (x86_64-msft-linux-gcc (GCC) 9.3.0, GNU ld (GNU Binutils) 2.34.0.20200220) #1 SMP Fri Jan 27 02:56:13 UTC 2023
+--81877-- 
+--81877-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-ssse3-avx-avx2-bmi-f16c-rdrand
+--81877-- Page sizes: currently 4096, max supported 4096
+--81877-- Valgrind library directory: /usr/lib/x86_64-linux-gnu/valgrind
+--81877-- Reading syms from /root/C18/monty/monty
+--81877-- Reading syms from /usr/lib/x86_64-linux-gnu/ld-2.31.so
+--81877--   Considering /usr/lib/debug/.build-id/c6/90288cb132a32066848b987fe4bfeb82e54291.debug ..
+--81877--   .. build-id is valid
+--81877-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux
+--81877--    object doesn't have a symbol table
+--81877--    object doesn't have a dynamic symbol table
+--81877-- Scheduler: using generic scheduler lock implementation.
+--81877-- Reading suppressions file: /usr/lib/x86_64-linux-gnu/valgrind/default.supp
+==81877== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-81877-by-root-on-???
+==81877== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-81877-by-root-on-???
+==81877== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-81877-by-root-on-???
+==81877== 
+==81877== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==81877== don't want to do, unless you know exactly what you're doing,
+==81877== or are doing some strange experiment):
+==81877==   /usr/lib/x86_64-linux-gnu/valgrind/../../bin/vgdb --pid=81877 ...command...
+==81877== 
+==81877== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==81877==   /path/to/gdb ./monty
+==81877== and then give GDB the following command
+==81877==   target remote | /usr/lib/x86_64-linux-gnu/valgrind/../../bin/vgdb --pid=81877
+==81877== --pid is optional if only one valgrind process is running
+==81877== 
+--81877-- REDIR: 0x4022e20 (ld-linux-x86-64.so.2:strlen) redirected to 0x580c9ce2 (???)
+--81877-- REDIR: 0x4022bf0 (ld-linux-x86-64.so.2:index) redirected to 0x580c9cfc (???)
+--81877-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_core-amd64-linux.so
+--81877--    object doesn't have a symbol table
+--81877-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so
+--81877--    object doesn't have a symbol table
+==81877== WARNING: new redirection conflicts with existing -- ignoring it
+--81877--     old: 0x04022e20 (strlen              ) R-> (0000.0) 0x580c9ce2 ???
+--81877--     new: 0x04022e20 (strlen              ) R-> (2007.0) 0x0483f060 strlen
+--81877-- REDIR: 0x401f600 (ld-linux-x86-64.so.2:strcmp) redirected to 0x483ffd0 (strcmp)
+--81877-- REDIR: 0x4023380 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4843a20 (mempcpy)
+--81877-- Reading syms from /usr/lib/x86_64-linux-gnu/libc-2.31.so
+--81877--   Considering /usr/lib/debug/.build-id/e6/78fe54a5d2c2092f8e47eb0b33105e380f7340.debug ..
+--81877--   .. build-id is valid
+--81877-- REDIR: 0x48f5480 (libc.so.6:memmove) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x48f4780 (libc.so.6:strncpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x48f57b0 (libc.so.6:strcasecmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x48f40a0 (libc.so.6:strcat) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x48f47e0 (libc.so.6:rindex) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x48f6c50 (libc.so.6:rawmemchr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x4911ce0 (libc.so.6:wmemchr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x4911820 (libc.so.6:wcscmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x48f55e0 (libc.so.6:mempcpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x48f5410 (libc.so.6:bcmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x48f4710 (libc.so.6:strncmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x48f4150 (libc.so.6:strcmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x48f5540 (libc.so.6:memset) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x49117e0 (libc.so.6:wcschr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x48f4670 (libc.so.6:strnlen) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x48f4230 (libc.so.6:strcspn) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x48f5800 (libc.so.6:strncasecmp) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x48f41d0 (libc.so.6:strcpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x48f5950 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x4912f50 (libc.so.6:wcsnlen) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x4911860 (libc.so.6:wcscpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x48f4820 (libc.so.6:strpbrk) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x48f4100 (libc.so.6:index) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x48f4630 (libc.so.6:strlen) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x48fdbb0 (libc.so.6:memrchr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x48f5850 (libc.so.6:strcasecmp_l) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x48f53d0 (libc.so.6:memchr) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x4911930 (libc.so.6:wcslen) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x48f4ae0 (libc.so.6:strspn) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x48f5750 (libc.so.6:stpncpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x48f56f0 (libc.so.6:stpcpy) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x48f6c90 (libc.so.6:strchrnul) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x48f58a0 (libc.so.6:strncasecmp_l) redirected to 0x48311d0 (_vgnU_ifunc_wrapper)
+--81877-- REDIR: 0x49dd510 (libc.so.6:__strrchr_avx2) redirected to 0x483ea10 (rindex)
+--81877-- REDIR: 0x48ef0e0 (libc.so.6:malloc) redirected to 0x483b780 (malloc)
+--81877-- REDIR: 0x48f4fa0 (libc.so.6:__GI_strstr) redirected to 0x4843ca0 (__strstr_sse2)
+--81877-- REDIR: 0x49d9540 (libc.so.6:__memchr_avx2) redirected to 0x4840050 (memchr)
+--81877-- REDIR: 0x49e06f0 (libc.so.6:__memcpy_avx_unaligned_erms) redirected to 0x48429f0 (memmove)
+--81877-- REDIR: 0x49d8aa0 (libc.so.6:__strspn_sse42) redirected to 0x4843ef0 (strspn)
+--81877-- REDIR: 0x49d8820 (libc.so.6:__strcspn_sse42) redirected to 0x4843e10 (strcspn)
+--81877-- REDIR: 0x49d8bd0 (libc.so.6:__strcmp_avx2) redirected to 0x483fed0 (strcmp)
+--81877-- REDIR: 0x48ef6d0 (libc.so.6:free) redirected to 0x483c9d0 (free)
+==81877== 
+==81877== HEAP SUMMARY:
+==81877==     in use at exit: 72 bytes in 3 blocks
+==81877==   total heap usage: 6 allocs, 3 frees, 4,760 bytes allocated
+==81877== 
+==81877== Searching for pointers to 3 not-freed blocks
+==81877== Checked 70,904 bytes
+==81877== 
+==81877== 72 bytes in 3 blocks are definitely lost in loss record 1 of 1
+==81877==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==81877==    by 0x10A1C1: push (in /root/C18/monty/monty)
+==81877==    by 0x109A7D: main (in /root/C18/monty/monty)
+==81877== 
+==81877== LEAK SUMMARY:
+==81877==    definitely lost: 72 bytes in 3 blocks
+==81877==    indirectly lost: 0 bytes in 0 blocks
+==81877==      possibly lost: 0 bytes in 0 blocks
+==81877==    still reachable: 0 bytes in 0 blocks
+==81877==         suppressed: 0 bytes in 0 blocks
+==81877== 
+==81877== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
