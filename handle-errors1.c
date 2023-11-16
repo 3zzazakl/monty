@@ -6,7 +6,7 @@
  */
 void handle_invalid_instruction(const char *instruction, int line_number)
 {
-	fprintf(stderr, "L%d: unknown instruction %s\n", line_number, instruction);
+	fprintf(stderr, "L%u: unknown instruction %s\n", line_number, instruction);
 	exit(EXIT_FAILURE);
 }
 /**
@@ -15,7 +15,7 @@ void handle_invalid_instruction(const char *instruction, int line_number)
  */
 void handle_push_integer_error(int line_number)
 {
-	fprintf(stderr, "L%d: usage: push integer\n", line_number);
+	fprintf(stderr, "L%u: usage: push integer\n", line_number);
 	exit(EXIT_FAILURE);
 }
 /**
@@ -24,7 +24,7 @@ void handle_push_integer_error(int line_number)
  */
 void handle_pint_empty_stack_error(int line_number)
 {
-	fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
+	fprintf(stderr, "L%u: can't pint, stack empty\n", line_number);
 	exit(EXIT_FAILURE);
 }
 /**
@@ -33,7 +33,7 @@ void handle_pint_empty_stack_error(int line_number)
  */
 void handle_pop_empty_stack_error(int line_number)
 {
-	fprintf(stderr, "L%d: can't pop an empty stack\n", line_number);
+	fprintf(stderr, "L%u: can't pop an empty stack\n", line_number);
 	exit(EXIT_FAILURE);
 }
 /**
@@ -42,6 +42,6 @@ void handle_pop_empty_stack_error(int line_number)
  */
 void handle_swap_stack_too_short_error(int line_number)
 {
-	fprintf(stderr, "L%d: can't swap stack too short\n", line_number);
+	fprintf(stderr, "L%u: can't swap stack too short\n", line_number);
 	exit(EXIT_FAILURE);
 }
