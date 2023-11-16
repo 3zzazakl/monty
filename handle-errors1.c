@@ -4,9 +4,9 @@
  * @instruction: input
  * @line_number: line number.
  */
-void handle_invalid_instruction(const char *instruction, int line_number)
+void handle_invalid_instruction(const char *instruction, unsigned int line_number)
 {
-	fprintf(stderr, "L%d: unknown instruction %s\n", line_number, instruction);
+	fprintf(stderr, "L%u: unknown instruction %s\n", line_number, instruction);
 	exit(EXIT_FAILURE);
 }
 /**
