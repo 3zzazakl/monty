@@ -44,14 +44,90 @@ int main(int argc, char *argv[])
 			}
 			else if (strcmp(opcode, "pall") == 0)
 				pall(stack);
-
+			else if (strcmp(opcode, "pint") == 0)
+			{
+				if (stack == NULL)
+					handle_pint_empty_stack_error(line_number);
+				else
+					pall(stack);
+			}
+			else if (strcmp(opcode, "pop") == 0)
+			{
+				if (stack == NULL)
+					handle_pop_empty_stack_error(line_number);
+				else
+					pop(&stack);
+			}
+			else if (strcmp(opcode, "swap") == 0)
+			{
+				if (stack == NULL || stack->next == NULL)
+					handle_swap_stack_too_short_error(line_number);
+				else
+					swap(&stack);
+			}
+			else if (strcmp(opcode, "add") == 0)
+			{
+				if (stack == NULL || stack->next == NULL)
+					handle_add_stack_too_short(line_number);
+				else
+					add(&stack);
+			}
+			else if (strcmp(opcode, "nop") == 0)
+			{
+				/*No Operation required*/
+			}
+			else if (strcmp(opcode, "sub") == 0)
+			{
+				if (stack == NULL || stack->next == NULL)
+					handle_sub_stack_too_short_error(line_number);
+				else
+					swap(&stack);
+			}
+			else if (strcmp(opcode, "div") == 0)
+			{
+				if (stack == NULL || stack->next == NULL)
+					handle_div_stack_too_short_error(line_number);
+				else if (stack->n == 0)
+					handle_division_by_zero(line_number);
+				else
+					_div(&stack);
+			}
+			else if (strcmp(opcode, "mul") == 0)
+			{
+				if (stack == NULL || stack->next == NULL)
+					handle_mul_stack_too_short_error(line_number);
+				else
+					mul(&stack);
+			}
+			else if (strcmp(opcode, "mod") == 0)
+			{
+				if (stack == NULL || stack->next == NULL)
+					handle_mod_stack_too_short_error(line_number);
+				else if (stack->n == 0)
+					handle_division_by_zero(line_number);
+				else
+					mod(&stack);
+			}
+			else if (strcmp(opcode, "pchar") == 0)
+			{
+				if (stack == NULL)
+					handle_pchar_stack_too_short_error(line_number);
+				else
+					pchar(&stack, line_number);
+			}
+			else if (strcmp(opcode, "pstr") == 0)
+				pstr(&stack, line_number);
+			else if (strcmp(opcode, "rotl") == 0)
+				rotl(&stack, line_number);
+			else if (strcmp(opcode, "rotr") == 0)
+				rotr(&stack, line_number);
 			else
 				handle_invalid_instruction(opcode, line_number);
 		}
 		line_number++;
 	}
-		free_stack(stack);
-		fclose(file);
-		free(line);
-		return (0);
+	free_stack(stack);
+	fclose(file);
+	free(line);
+	return (0);
 }

@@ -42,16 +42,32 @@ void (*f)(stack_t **stack, unsigned int line_number);
 /******Helping*****/
 int is_integer(const char *str);
 void free_stack(stack_t *stack);
-
-
-
 /*******Function_Declarations*******/
 void push(stack_t **stack, int value);
 void pall(stack_t *stack);
-
+void pint(stack_t *stack);
+void pop(stack_t **stack);
+void swap(stack_t **stack);
+void add(stack_t **stack);
+void sub(stack_t **stack);
+void _div(stack_t **stack);
+void mul(stack_t **stack);
+void mod(stack_t **stack);
+void pchar(stack_t **stack, unsigned int line_number);
+void pstr(stack_t **stack, unsigned int line_number);
+void rotl(stack_t **stack, unsigned int line_number __attribute__((unused)));
+void rotr(stack_t **stack, unsigned int line_number __attribute__((unused)));
 /************Handling_Errors**********/
 void handle_invalid_instruction(const char *instruction, int line_number);
 void handle_push_integer_error(int line_numer);
-
-
+void handle_pint_empty_stack_error(int line_number);
+void handle_pop_empty_stack_error(int line_number);
+void handle_swap_stack_too_short_error(int line_number);
+void handle_add_stack_too_short(int line_number);
+void handle_sub_stack_too_short_error(int line_number);
+void handle_div_stack_too_short_error(int line_number);
+void handle_division_by_zero(int line_number);
+void handle_mul_stack_too_short_error(int line_number);
+void handle_mod_stack_too_short_error(int line_number);
+void handle_pchar_stack_too_short_error(int line_number);
 #endif /* MONTY_H_ */

@@ -3,7 +3,7 @@
 /**
  * push - pushing a new value to stack.
  * @stack: input stack
- * @value: new value. 
+ * @value: new value.
  */
 void push(stack_t **stack, int value)
 {
