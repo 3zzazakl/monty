@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
 				if (stack == NULL || stack->next == NULL)
 					handle_swap_stack_too_short_error(line_number);
 				else
-					swap(&stack);
+					swap(&stack, line_number);
 			}
 			else if (strcmp(opcode, "add") == 0)
 			{
@@ -81,7 +81,7 @@ int main(int argc, char *argv[])
 				if (stack == NULL || stack->next == NULL)
 					handle_sub_stack_too_short_error(line_number);
 				else
-					swap(&stack);
+					swap(&stack, line_number);
 			}
 			else if (strcmp(opcode, "div") == 0)
 			{
