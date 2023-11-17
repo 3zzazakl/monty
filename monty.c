@@ -31,8 +31,10 @@ int main(int argc, char *argv[])
 		char *opcode, *arg;
 
 		opcode = strtok(line, " \n");
-		if (*line == '#')
+		if (line[0] == '#')
+		{
 			continue;
+		}
 		if (opcode != NULL)
 		{
 			if (strcmp(opcode, "push") == 0)
@@ -122,7 +124,9 @@ int main(int argc, char *argv[])
 			else if (strcmp(opcode, "rotr") == 0)
 				rotr(&stack, line_number);
 			else
+			{
 				handle_invalid_instruction(opcode, line_number);
+			}
 		}
 
 		line_number++;
