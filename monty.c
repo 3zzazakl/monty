@@ -124,12 +124,12 @@ int main(int argc, char *argv[])
 			else
 				handle_invalid_instruction(opcode, line_number);
 		}
-		else
-			handle_invalid_instruction(opcode, line_number);
+		/* else
+			handle_invalid_instruction(opcode, line_number); */
 		line_number++;
 	}
+	free_stack(stack);
 	fclose(file);
 	free(line);
-	free_stack(stack);
 	return (0);
 }
