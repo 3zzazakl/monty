@@ -20,7 +20,7 @@ void mod(stack_t **stack, unsigned int line_number)
 
 	if (top == 0)
 	{
-		fprintf(stderr, "Error: division by zero\n");
+		fprintf(stderr, "L%u: division by zero\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
