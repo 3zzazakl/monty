@@ -14,5 +14,4 @@ void free_stack(stack_t *stack)
 		stack = stack->next;
 		free(current);
 	}
-	free(stack);
 }
