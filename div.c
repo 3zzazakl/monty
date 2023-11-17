@@ -4,19 +4,19 @@
  * _div - divide values
  * @stack: input stack
  */
-void _div(stack_t **stack)
+void _div(stack_t **stack, unsigned int line_number)
 {
 	int result;
 	stack_t *top;
 
 	if (*stack ==  NULL || (*stack)->next == NULL)
 	{
-		fprintf(stderr, "Error: can't div, stack too short\n");
+		fprintf(stderr, "L%u: can't div, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	else if ((*stack)->n == 0)
 	{
-		fprintf(stderr, "Error: division by zero\n");
+		fprintf(stderr, "L%u: division by zero\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 

@@ -90,7 +90,7 @@ int main(int argc, char *argv[])
 				else if (stack->n == 0)
 					handle_division_by_zero(line_number);
 				else
-					_div(&stack);
+					_div(&stack, line_number);
 			}
 			else if (strcmp(opcode, "mul") == 0)
 			{
