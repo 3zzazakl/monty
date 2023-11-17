@@ -106,7 +106,7 @@ int main(int argc, char *argv[])
 				else if (stack->n == 0)
 					handle_division_by_zero(line_number);
 				else
-					mod(&stack);
+					mod(&stack, line_number);
 			}
 			else if (strcmp(opcode, "pchar") == 0)
 			{
