@@ -5,7 +5,7 @@
  * @argv: array of elements.
  * Return: (Success) 0
  */
-int main(int argc, char **argv[])
+int main(int argc, char *argv[])
 {
 	FILE *file;
 	char *line = NULL;
