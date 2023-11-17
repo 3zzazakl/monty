@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 		opcode = strtok(line, " \n");
 		if (*line == '#')
 			continue;
-		if (opcode != NULL && opcode[0] != '\0')
+		if (opcode != NULL)
 		{
 			if (strcmp(opcode, "push") == 0)
 			{
@@ -124,8 +124,6 @@ int main(int argc, char *argv[])
 			else
 				handle_invalid_instruction(opcode, line_number);
 		}
-		else
-			handle_invalid_instruction(opcode, line_number);
 
 		line_number++;
 	}
