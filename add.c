@@ -3,6 +3,7 @@
 /**
  * add - adding values.
  * @stack: input stack.
+ * @line_number: line number
  */
 void add(stack_t **stack, unsigned int line_number)
 {

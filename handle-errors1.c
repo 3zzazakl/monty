@@ -33,7 +33,7 @@ void handle_pint_empty_stack_error(unsigned int line_number)
  */
 void handle_pop_empty_stack_error(unsigned int line_number)
 {
-	fprintf(stderr, "L%u: can't pop an empty stack\n", line_number);
+	fprintf(stderr, "L%u: can't pop, an empty stack\n", line_number);
 	exit(EXIT_FAILURE);
 }
 /**
@@ -42,6 +42,6 @@ void handle_pop_empty_stack_error(unsigned int line_number)
  */
 void handle_swap_stack_too_short_error(unsigned int line_number)
 {
-	fprintf(stderr, "L%u: can't swap stack too short\n", line_number);
+	fprintf(stderr, "L%u: can't swap, stack too short\n", line_number);
 	exit(EXIT_FAILURE);
 }

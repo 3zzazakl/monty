@@ -3,6 +3,7 @@
 /**
  * mod - calculate modulus of values.
  * @stack: Input stack
+ * @line_number: line number
  */
 void mod(stack_t **stack, unsigned int line_number)
 {

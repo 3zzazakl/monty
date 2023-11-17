@@ -3,6 +3,7 @@
 /**
  * _div - divide values
  * @stack: input stack
+ * @line_number: line number
  */
 void _div(stack_t **stack, unsigned int line_number)
 {

@@ -10,7 +10,7 @@ void pop(stack_t **stack)
 
 	if (*stack == NULL)
 	{
-		fprintf(stderr, "Error: can't pop an empty stack\n");
+		fprintf(stderr, "Error: can't pop, an empty stack\n");
 		exit(EXIT_FAILURE);
 	}
 	top = *stack;

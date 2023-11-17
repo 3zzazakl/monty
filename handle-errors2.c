@@ -5,7 +5,7 @@
  */
 void handle_add_stack_too_short(unsigned int line_number)
 {
-	fprintf(stderr, "L%u: can't add stack too short\n", line_number);
+	fprintf(stderr, "L%u: can't add, stack too short\n", line_number);
 	exit(EXIT_FAILURE);
 }
 /**
@@ -14,7 +14,7 @@ void handle_add_stack_too_short(unsigned int line_number)
  */
 void handle_sub_stack_too_short_error(unsigned int line_number)
 {
-	fprintf(stderr, "L%u: can't sub stack too short\n", line_number);
+	fprintf(stderr, "L%u: can't sub, stack too short\n", line_number);
 	exit(EXIT_FAILURE);
 }
 
@@ -43,6 +43,6 @@ void handle_division_by_zero(unsigned int line_number)
  */
 void handle_mul_stack_too_short_error(unsigned int line_number)
 {
-	fprintf(stderr, "L%u: can't mul stack too short\n", line_number);
+	fprintf(stderr, "L%u: can't mul, stack too short\n", line_number);
 	exit(EXIT_FAILURE);
 }
