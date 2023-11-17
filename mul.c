@@ -19,5 +19,6 @@ void mul(stack_t **stack, unsigned int line_number)
 
 	top = *stack;
 	*stack = (*stack)->next;
+	(*stack)->next = top->next;
 	free(top);
 }
