@@ -124,8 +124,9 @@ int main(int argc, char *argv[])
 			else
 				handle_invalid_instruction(opcode, line_number);
 		}
-		/* else
-			handle_invalid_instruction(opcode, line_number); */
+		else
+			handle_invalid_instruction(opcode, line_number);
+
 		line_number++;
 	}
 	fclose(file);
