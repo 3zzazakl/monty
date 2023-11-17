@@ -41,7 +41,10 @@ int main(int argc, char *argv[])
 			{
 				arg = strtok(NULL, " \n");
 				if (arg == NULL || !is_integer(arg))
-						handle_push_integer_error(line_number);
+				{
+					fprintf(stderr, "L%u: usage: push integer\n", line_number);
+					exit(EXIT_FAILURE);
+				}
 				push(&stack, atoi(arg));
 			}
 			else if (strcmp(opcode, "pall") == 0)
