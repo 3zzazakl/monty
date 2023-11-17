@@ -97,7 +97,7 @@ int main(int argc, char *argv[])
 				if (stack == NULL || stack->next == NULL)
 					handle_mul_stack_too_short_error(line_number);
 				else
-					mul(&stack);
+					mul(&stack, line_number);
 			}
 			else if (strcmp(opcode, "mod") == 0)
 			{
