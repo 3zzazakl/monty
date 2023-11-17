@@ -70,7 +70,7 @@ int main(int argc, char *argv[])
 				if (stack == NULL || stack->next == NULL)
 					handle_add_stack_too_short(line_number);
 				else
-					add(&stack);
+					add(&stack, line_number);
 			}
 			else if (strcmp(opcode, "nop") == 0)
 			{
