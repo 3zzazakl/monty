@@ -58,7 +58,7 @@ void pstr(stack_t **stack, unsigned int line_number);
 void rotl(stack_t **stack, unsigned int line_number __attribute__((unused)));
 void rotr(stack_t **stack, unsigned int line_number __attribute__((unused)));
 /************Handling_Errors**********/
-void handle_invalid_instruction(const char *instruction, unsigned int line_number);
+void handle_invalid_instruction(char *opcode, unsigned int line_number);
 
 void handle_push_integer_error(unsigned int line_numer);
 void handle_pint_empty_stack_error(unsigned int line_number);

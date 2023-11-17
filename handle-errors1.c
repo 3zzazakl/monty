@@ -1,12 +1,12 @@
 #include "monty.h"
 /**
  * handle_invalid_instruction - check invalid instruction
- * @instruction: input
+ * @opcode: input
  * @line_number: line number.
  */
-void handle_invalid_instruction(const char *instruction, unsigned int line_number)
+void handle_invalid_instruction(char *opcode, unsigned int line_number)
 {
-	fprintf(stderr, "L%u: unknown instruction %s\n", line_number, instruction);
+	fprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode);
 	exit(EXIT_FAILURE);
 }
 /**
