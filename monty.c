@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 	{
 		char *opcode, *arg;
 
-		if (line[0] == '#')
+		if (line[0] == '#' || all_weightspace(line))
 		{
 			continue;
 		}
