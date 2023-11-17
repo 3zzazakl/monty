@@ -81,7 +81,7 @@ int main(int argc, char *argv[])
 				if (stack == NULL || stack->next == NULL)
 					handle_sub_stack_too_short_error(line_number);
 				else
-					swap(&stack, line_number);
+					sub(&stack, line_number);
 			}
 			else if (strcmp(opcode, "div") == 0)
 			{
