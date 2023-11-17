@@ -30,8 +30,9 @@ int main(int argc, char *argv[])
 	{
 		char *opcode, *arg;
 
-		if (line[0] == '#' || all_weightspace(line))
+		if (line[0] == '#')
 		{
+			line_number++;
 			continue;
 		}
 		opcode = strtok(line, " \n");
