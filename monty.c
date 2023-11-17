@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 				if (stack == NULL)
 					handle_pint_empty_stack_error(line_number);
 				else
-					pall(stack);
+					pint(stack);
 			}
 			else if (strcmp(opcode, "pop") == 0)
 			{
