@@ -30,11 +30,11 @@ int main(int argc, char *argv[])
 	{
 		char *opcode, *arg;
 
-		opcode = strtok(line, " \n");
 		if (line[0] == '#')
 		{
 			continue;
 		}
+		opcode = strtok(line, " \n");
 		if (opcode != NULL)
 		{
 			if (strcmp(opcode, "push") == 0)
