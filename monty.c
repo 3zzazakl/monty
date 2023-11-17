@@ -24,8 +24,6 @@ int main(int argc, char *argv[])
 	if (file == NULL)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
-		free(line); /*1*/
-		free_stack(stack); /*2*/
 		exit(EXIT_FAILURE);
 	}
 	while ((read = getline(&line, &len, file)) != -1)
@@ -43,7 +41,6 @@ int main(int argc, char *argv[])
 				if (arg == NULL || !is_integer(arg))
 						handle_push_integer_error(line_number);
 				push(&stack, atoi(arg));
-				free(line); /*3*/
 			}
 			else if (strcmp(opcode, "pall") == 0)
 				pall(stack);
